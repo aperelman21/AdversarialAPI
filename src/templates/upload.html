@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Rendering Dynamic Images Using FastAPI</title>
+  </head>
+  <body>
+
+    <form action="/images/upload" enctype="multipart/form-data" method="POST">
+      <input name="file" type="file" />
+      <input type="submit" />
+    </form>
+
+    {% if img2 %}
+    <h2>Noisy Image</h2>
+    <img src="data:image/jpeg;base64,{{ img1 }}" width="64" height="64" />
+    <h2>Restored Image</h2>
+    <img src="data:image/jpeg;base64,{{ img2 }}" width="64" height="64"/>
+    {% else %}
+    <h1>Image will be render here...</h1>
+    {% endif %}
+
+  </body>
+</html>
