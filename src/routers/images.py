@@ -47,7 +47,7 @@ async def create_upload_file(request: Request,file: UploadFile):
     encoded_image2 = base64.b64encode(buf.getvalue()).decode("utf-8")
 
     return templates.TemplateResponse(
-        "upload.html", {"request": request,
+        "upload2.html", {"request": request,
                         "img1":encoded_image,
                         "img2":encoded_image2})
 
